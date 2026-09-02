@@ -501,7 +501,16 @@ const snapshots={
     updated:'Updated Aug 1, 2026'
   }
 };
+const snapshotPages={
+  aug8:'snapshots/aug-08-2026.html',
+  july:'snapshots/aug-01-2026.html',
+  jun:'snapshots/jun-14-2026.html'
+};
 function setSnapshot(id){
+  if(id!=='aug29'){
+    window.location.href=snapshotPages[id];
+    return;
+  }
   const s=snapshots[id];
   document.getElementById('snapshot-range').textContent=s.range;
   document.getElementById('snapshot-source').textContent=s.source;
