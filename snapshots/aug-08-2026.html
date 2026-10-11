@@ -42,6 +42,8 @@ main{position:relative;z-index:1}
 .cg-eq{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
 .cg-full{display:grid;gap:1px;background:var(--border);border:1px solid var(--border)}
 .cg3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
+.cg2>*,.cg-eq>*,.cg3>*,.cg-full>*{min-width:0}
+canvas{max-width:100%}
 /* CARDS */
 .sc{background:var(--bg);padding:22px 18px;transition:background .2s}
 .sc:hover{background:var(--bg2)}
@@ -128,8 +130,9 @@ footer span{color:var(--text2)}
   </div>
   <div style="text-align:right">
     <label class="scan-badge snapshot-menu">
-      <select class="snapshot-select" id="snapshot-select" onchange="window.location.href=this.value==='latest'?'../index.html':this.value==='july'?'aug-01-2026.html':this.value==='jun'?'jun-14-2026.html':'aug-08-2026.html'">
-        <option value="latest">Latest snapshot -- Aug 29, 2026</option>
+      <select class="snapshot-select" id="snapshot-select" onchange="window.location.href=this.value==='latest'?'../index.html':this.value==='aug29'?'aug-29-2026.html':this.value==='july'?'aug-01-2026.html':this.value==='jun'?'jun-14-2026.html':'aug-08-2026.html'">
+        <option value="latest">Latest snapshot -- Oct 10, 2026</option>
+        <option value="aug29">Aug 29 snapshot</option>
         <option value="aug8" selected>Aug 8 snapshot</option>
         <option value="july">Aug 1 snapshot</option>
         <option value="jun">Jun 14 snapshot</option>
