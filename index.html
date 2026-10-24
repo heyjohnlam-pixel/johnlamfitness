@@ -105,6 +105,52 @@ footer span{color:var(--text2)}
 .scores-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .scores-grid .pl{width:94px}
 
+/* WEEKLY GOAL PULSE */
+.week-pulse{border:1px solid var(--border);background:var(--bg);margin-bottom:14px}
+.pulse-head{padding:22px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;border-bottom:1px solid var(--border)}
+.pulse-kicker{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+.pulse-title{font-size:clamp(1.45rem,2.5vw,2.2rem);font-weight:700;line-height:1.05;letter-spacing:0}
+.pulse-copy{font-size:13px;color:var(--text2);line-height:1.55;margin-top:7px;max-width:650px}
+.pulse-window{font-family:var(--mono);font-size:11px;color:var(--text2);text-align:right;line-height:1.6;flex-shrink:0}
+.pulse-window strong{display:block;color:var(--text);font-size:13px;font-weight:500}
+.pulse-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:1px;background:var(--border)}
+.pulse-card{background:var(--bg);padding:20px;min-width:0}
+.pulse-card.nutrition{grid-column:span 6}.pulse-card.strength{grid-column:span 3}.pulse-card.cardio{grid-column:span 3}.pulse-card.steps{grid-column:span 12}
+.pulse-card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px}
+.pulse-label{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--text3)}
+.pulse-state{font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.05em;padding:4px 6px;border:1px solid var(--border2);white-space:nowrap}
+.pulse-state.good{color:var(--accent2);border-color:rgba(102,240,200,.3);background:rgba(102,240,200,.06)}
+.pulse-state.focus{color:var(--amber);border-color:rgba(240,184,102,.3);background:rgba(240,184,102,.06)}
+.pulse-state.sync{color:var(--purple);border-color:rgba(160,102,240,.3);background:rgba(160,102,240,.06)}
+.pulse-value{font-family:var(--mono);font-size:clamp(2rem,4vw,3.35rem);font-weight:500;line-height:.95;color:var(--text)}
+.pulse-value small{font-size:12px;font-weight:400;color:var(--text3)}
+.pulse-context{font-size:12px;color:var(--text3);margin-top:7px;line-height:1.5}
+.macro-stack{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.macro-line{display:grid;grid-template-columns:64px 1fr 43px;gap:10px;align-items:center}
+.macro-name,.macro-pct{font-family:var(--mono);font-size:10px;color:var(--text3)}
+.macro-pct{text-align:right;color:var(--text2)}
+.macro-track{height:5px;background:var(--border2);overflow:hidden}
+.macro-fill{height:100%;background:var(--accent)}
+.macro-fill.protein{background:var(--accent2)}.macro-fill.carbs{background:var(--purple)}.macro-fill.fat{background:var(--amber)}
+.pulse-foot{font-size:11px;color:var(--text3);line-height:1.55;margin-top:16px;padding-top:12px;border-top:1px solid var(--border)}
+.session-marks{display:flex;gap:6px;margin-top:22px}
+.session-mark{height:8px;flex:1;background:var(--accent2)}
+.cardio-split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-top:18px}
+.cardio-split>div{background:var(--bg2);padding:10px}
+.cardio-split b{display:block;font-family:var(--mono);font-size:16px;color:var(--text);font-weight:500}
+.cardio-split span{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em}
+.steps-summary{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:18px}
+.step-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.step-day{position:relative;min-height:104px;background:var(--bg2);border:1px solid var(--border);padding:10px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.step-day::after{content:'';position:absolute;left:0;right:0;bottom:0;height:var(--step);background:rgba(102,240,200,.08);border-top:1px solid rgba(102,240,200,.35)}
+.step-day.pending::after{height:0}
+.step-day>*{position:relative;z-index:1}
+.step-dow{font-family:var(--mono);font-size:9px;text-transform:uppercase;color:var(--text3)}
+.step-count{font-family:var(--mono);font-size:13px;color:var(--text)}
+.step-day.pending .step-count{font-size:10px;color:var(--purple)}
+.step-hit{font-size:9px;color:var(--accent2);text-transform:uppercase;letter-spacing:.05em}
+.step-day.pending .step-hit{color:var(--text3)}
+
 @media(max-width:900px){
   header{padding:28px 20px 22px}
   nav{padding:0 16px}
@@ -113,10 +159,18 @@ footer span{color:var(--text2)}
   .sg{grid-template-columns:1fr 1fr}
   .cg2,.cg-eq,.cg3,.meal-grid,.rules-grid,.scores-grid{grid-template-columns:1fr}
   .week-grid{grid-template-columns:1fr 1fr}
+  .pulse-card.nutrition{grid-column:span 12}.pulse-card.strength,.pulse-card.cardio{grid-column:span 6}
   footer{padding:16px 20px;flex-direction:column;gap:4px}
 }
 @media(max-width:480px){
   .nav-btn{font-size:10px;padding:11px 10px;letter-spacing:.01em}
+  .pulse-head{padding:18px;align-items:flex-start;flex-direction:column}
+  .pulse-window{text-align:left}
+  .pulse-card{padding:18px}
+  .pulse-card.strength,.pulse-card.cardio{grid-column:span 12}
+  .steps-summary{align-items:flex-start;flex-direction:column}
+  .step-days{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .step-day:last-child{grid-column:span 2}
 }
 </style>
 </head>
@@ -159,12 +213,64 @@ footer span{color:var(--text2)}
 <!-- ── STRATEGY ──────────────────────────────────────────── -->
 <div id="strategy" class="section active">
 
-  <div class="sg">
-    <div class="sc"><div class="lbl">Weekly cal target</div><div class="val">15,113</div><div class="sub">2,159/day every day</div></div>
-    <div class="sc"><div class="lbl">Weekly carb target</div><div class="val">1,575<sup>g</sup></div><div class="sub">225g/day every day</div></div>
-    <div class="sc"><div class="lbl">Weekly protein</div><div class="val">1,085<sup>g</sup></div><div class="sub">155g/day every day</div></div>
-    <div class="sc"><div class="lbl">Training sessions</div><div class="val">8</div><div class="sub">3 strength · 2 HIIT · 3 LISS</div></div>
-  </div>
+  <section class="week-pulse" aria-labelledby="pulse-title">
+    <div class="pulse-head">
+      <div>
+        <div class="pulse-kicker">Weekly goal pulse</div>
+        <h2 class="pulse-title" id="pulse-title">This week at a glance</h2>
+        <p class="pulse-copy">Calories controlled. Strength complete. Carbs and cardio are the remaining work.</p>
+      </div>
+      <div class="pulse-window"><strong>Oct 11-17, 2026</strong>Latest verified snapshot<br>Updated Oct 19</div>
+    </div>
+
+    <div class="pulse-grid">
+      <article class="pulse-card nutrition">
+        <div class="pulse-card-head"><div class="pulse-label">Nutrition + macros</div><span class="pulse-state focus">Carbs need attention</span></div>
+        <div class="pulse-value">14,145 <small>/ 15,113 kcal</small></div>
+        <div class="pulse-context">94% of the weekly calorie target. Intake stayed controlled; the remaining gap came mostly from carbs.</div>
+        <div class="macro-stack">
+          <div class="macro-line"><span class="macro-name">Calories</span><div class="macro-track" role="progressbar" aria-label="Weekly calories" aria-valuemin="0" aria-valuemax="100" aria-valuenow="94"><div class="macro-fill" style="width:94%"></div></div><span class="macro-pct">94%</span></div>
+          <div class="macro-line"><span class="macro-name">Protein</span><div class="macro-track" role="progressbar" aria-label="Weekly protein" aria-valuemin="0" aria-valuemax="100" aria-valuenow="95"><div class="macro-fill protein" style="width:95%"></div></div><span class="macro-pct">95%</span></div>
+          <div class="macro-line"><span class="macro-name">Carbs</span><div class="macro-track" role="progressbar" aria-label="Weekly carbohydrates" aria-valuemin="0" aria-valuemax="100" aria-valuenow="87"><div class="macro-fill carbs" style="width:87%"></div></div><span class="macro-pct">87%</span></div>
+          <div class="macro-line"><span class="macro-name">Fat</span><div class="macro-track" role="progressbar" aria-label="Weekly fat" aria-valuemin="0" aria-valuemax="100" aria-valuenow="104"><div class="macro-fill fat" style="width:100%"></div></div><span class="macro-pct">104%</span></div>
+        </div>
+        <div class="pulse-foot">Weekly totals: 1,032.5g protein / 1,366.4g carbs / 518.4g fat. Priority: shift roughly 200g of the weekly intake toward planned carbs while keeping fat near 497g.</div>
+      </article>
+
+      <article class="pulse-card strength">
+        <div class="pulse-card-head"><div class="pulse-label">Strength</div><span class="pulse-state good">Goal met</span></div>
+        <div class="pulse-value">3 <small>/ 3 sessions</small></div>
+        <div class="pulse-context">199 total minutes. All planned strength sessions were completed.</div>
+        <div class="session-marks" aria-label="Three of three strength sessions complete"><span class="session-mark"></span><span class="session-mark"></span><span class="session-mark"></span></div>
+        <div class="pulse-foot">Longest session: 90 minutes on Oct 14. Keep the next hard session recovery-led, not volume-led.</div>
+      </article>
+
+      <article class="pulse-card cardio">
+        <div class="pulse-card-head"><div class="pulse-label">Cardio</div><span class="pulse-state focus">27 min remaining</span></div>
+        <div class="pulse-value">123 <small>/ 150 min</small></div>
+        <div class="pulse-context">82% of the weekly cardio target across four recorded sessions.</div>
+        <div class="cardio-split"><div><b>69.1</b><span>Run min</span></div><div><b>53.5</b><span>Walk min</span></div></div>
+        <div class="pulse-foot">Two runs and two walks. One 30-minute easy session would close the weekly target.</div>
+      </article>
+
+      <article class="pulse-card steps">
+        <div class="pulse-card-head"><div class="pulse-label">Daily step count</div><span class="pulse-state sync">4 synced days</span></div>
+        <div class="steps-summary">
+          <div><div class="pulse-value">11,804 <small>avg / day</small></div><div class="pulse-context">47,217 recorded steps; every fully synced day cleared 10,000.</div></div>
+          <div class="pulse-context">Apple Health sync through Oct 14<br>Missing days are not counted as zero.</div>
+        </div>
+        <div class="step-days" aria-label="Daily steps for October 11 to 17">
+          <div class="step-day" style="--step:100%"><span class="step-dow">Sun 11</span><strong class="step-count">13,246</strong><span class="step-hit">Goal hit</span></div>
+          <div class="step-day" style="--step:100%"><span class="step-dow">Mon 12</span><strong class="step-count">11,427</strong><span class="step-hit">Goal hit</span></div>
+          <div class="step-day" style="--step:100%"><span class="step-dow">Tue 13</span><strong class="step-count">10,008</strong><span class="step-hit">Goal hit</span></div>
+          <div class="step-day" style="--step:100%"><span class="step-dow">Wed 14</span><strong class="step-count">12,536</strong><span class="step-hit">Goal hit</span></div>
+          <div class="step-day pending"><span class="step-dow">Thu 15</span><strong class="step-count">Sync pending</strong><span class="step-hit">Not scored</span></div>
+          <div class="step-day pending"><span class="step-dow">Fri 16</span><strong class="step-count">Sync pending</strong><span class="step-hit">Not scored</span></div>
+          <div class="step-day pending"><span class="step-dow">Sat 17</span><strong class="step-count">Sync pending</strong><span class="step-hit">Not scored</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <!-- MACRO PACE TRACKER -->
   <div class="cg-full card" style="padding:26px 22px">
