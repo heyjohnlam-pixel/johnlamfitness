@@ -101,8 +101,6 @@ footer span{color:var(--text2)}
 
 /* WEEK GRID RESPONSIVE */
 .week-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
-.meal-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
-.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
 .scores-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .scores-grid .pl{width:94px}
 
@@ -135,7 +133,7 @@ footer span{color:var(--text2)}
   .nav-btn{font-size:11px;padding:12px 12px}
   .section{padding:22px 16px}
   .sg{grid-template-columns:1fr 1fr}
-  .cg2,.cg-eq,.cg3,.meal-grid,.rules-grid,.scores-grid{grid-template-columns:1fr}
+  .cg2,.cg-eq,.cg3,.scores-grid{grid-template-columns:1fr}
   .week-grid{grid-template-columns:1fr 1fr}
   footer{padding:16px 20px;flex-direction:column;gap:4px}
 }
@@ -225,7 +223,7 @@ footer span{color:var(--text2)}
   <!-- MACRO PACE TRACKER -->
   <div class="cg-full card" style="padding:26px 22px">
     <div class="card-lbl" style="margin-bottom:4px">Macro pace -- where you should be by each meal</div>
-    <div style="font-family:var(--sans);font-size:12px;color:var(--text3);margin-bottom:18px">Based on your daily template. Tap a meal checkpoint to update.</div>
+    <div style="font-family:var(--sans);font-size:12px;color:var(--text3);margin-bottom:18px">Tap a meal checkpoint to compare your intake pace with the current targets.</div>
     <div style="display:flex;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:20px;overflow:hidden;border-radius:3px">
       <button onclick="setPace('breakfast',this)" id="pb-breakfast" style="flex:1;padding:10px;background:var(--accent);border:none;cursor:pointer;font-family:var(--sans);font-size:12px;font-weight:600;color:#0a0a0a;transition:all .15s">Breakfast</button>
       <button onclick="setPace('lunch',this)" id="pb-lunch" style="flex:1;padding:10px;background:var(--bg3);border:none;cursor:pointer;font-family:var(--sans);font-size:12px;font-weight:500;color:var(--text2);transition:all .15s">After Lunch</button>
@@ -247,15 +245,6 @@ footer span{color:var(--text2)}
   </div>
 
   <!-- WEEKLY SCHEDULE -->
-  <div style="background:var(--bg2);border:1px solid var(--border);padding:12px 18px;display:flex;gap:24px;align-items:center;flex-wrap:wrap">
-    <div style="font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--text3)">Daily targets (every day)</div>
-    <div style="display:flex;gap:20px;flex-wrap:wrap">
-      <span style="font-family:var(--mono);font-size:13px;color:var(--accent)">2,159 kcal</span>
-      <span style="font-family:var(--mono);font-size:13px;color:var(--purple)">225g carbs</span>
-      <span style="font-family:var(--mono);font-size:13px;color:var(--accent2)">155g protein</span>
-      <span style="font-family:var(--mono);font-size:13px;color:var(--amber)">71g fat</span>
-    </div>
-  </div>
   <div class="week-grid">
     <div class="card" style="padding:16px 13px"><div style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:4px">Mon</div><div style="font-size:13px;font-weight:700;margin-bottom:8px">LISS + HIIT</div><div style="display:flex;flex-direction:column;gap:4px;margin-bottom:10px"><div style="display:inline-flex;align-items:center;background:rgba(102,240,200,.1);border:1px solid rgba(102,240,200,.25);border-radius:3px;padding:3px 7px"><span style="font-family:var(--mono);font-size:10px;color:#66f0c8">LISS 30min</span></div><div style="display:inline-flex;align-items:center;background:rgba(240,184,102,.1);border:1px solid rgba(240,184,102,.25);border-radius:3px;padding:3px 7px"><span style="font-family:var(--mono);font-size:10px;color:#f0b866">HIIT 4min</span></div></div><div style="font-family:var(--sans);font-size:11px;color:var(--text3);line-height:1.5">Walk first, Tabata after<br>EAAs + Gatorade intra</div></div>
     <div class="card" style="padding:16px 13px"><div style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:4px">Tue</div><div style="font-size:13px;font-weight:700;margin-bottom:8px">Strength</div><div style="display:flex;flex-direction:column;gap:4px;margin-bottom:10px"><div style="display:inline-flex;align-items:center;background:rgba(160,102,240,.1);border:1px solid rgba(160,102,240,.25);border-radius:3px;padding:3px 7px"><span style="font-family:var(--mono);font-size:10px;color:#a066f0">Strength</span></div></div><div style="font-family:var(--sans);font-size:11px;color:var(--text3);line-height:1.5">Heavy compound lifts<br>EAAs intra · creatine post</div></div>
@@ -266,17 +255,8 @@ footer span{color:var(--text2)}
     <div class="card" style="padding:16px 13px"><div style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:4px">Sun</div><div style="font-size:13px;font-weight:700;margin-bottom:8px">Rest</div><div style="display:flex;flex-direction:column;gap:4px;margin-bottom:10px"><div style="display:inline-flex;align-items:center;background:rgba(90,86,82,.15);border:1px solid rgba(90,86,82,.3);border-radius:3px;padding:3px 7px"><span style="font-family:var(--mono);font-size:10px;color:var(--text3)">Off day</span></div></div><div style="font-family:var(--sans);font-size:11px;color:var(--text3);line-height:1.5">Full recovery<br>Weekly check-in · pre-log Mon</div></div>
   </div>
 
-  <!-- MEAL TEMPLATE + SUPPLEMENTS -->
-  <div class="meal-grid">
-    <div class="card">
-      <div class="card-lbl" style="margin-bottom:14px">Daily meal template <span style="color:var(--accent)">-- 2,159 kcal every day</span></div>
-      <div style="display:flex;flex-direction:column;gap:0">
-        <div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px"><div style="font-size:13px;font-weight:600">Breakfast</div><div style="font-family:var(--mono);font-size:11px;color:var(--text3)">~542 kcal</div></div><div style="font-size:13px;color:var(--text2);line-height:1.65;margin-bottom:5px">Slate milk · OpenAI scrambled eggs (2 scoops) · white rice · fruit (blueberries / pineapple / banana)</div><div style="display:flex;gap:10px"><span style="font-family:var(--mono);font-size:11px;color:var(--accent2)">55g C</span><span style="font-family:var(--mono);font-size:11px;color:var(--text2)">40g P</span><span style="font-family:var(--mono);font-size:11px;color:var(--text3)">18g F</span></div></div>
-        <div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px"><div style="font-size:13px;font-weight:600">Lunch</div><div style="font-family:var(--mono);font-size:11px;color:var(--text3)">~622 kcal</div></div><div style="font-size:13px;color:var(--text2);line-height:1.65;margin-bottom:5px">OpenAI salad · larger white rice serving · OpenAI bone broth · dinner roll · banana</div><div style="display:flex;gap:10px"><span style="font-family:var(--mono);font-size:11px;color:var(--accent2)">70g C</span><span style="font-family:var(--mono);font-size:11px;color:var(--text2)">45g P</span><span style="font-family:var(--mono);font-size:11px;color:var(--text3)">18g F</span></div></div>
-        <div style="padding:10px 0;border-bottom:1px solid var(--border)"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px"><div style="font-size:13px;font-weight:600">Dinner</div><div style="font-family:var(--mono);font-size:11px;color:var(--text3)">~658 kcal</div></div><div style="font-size:13px;color:var(--text2);line-height:1.65;margin-bottom:5px">Asian chicken / beef boy kibble · white rice · broccoli or cauliflower · avocado · furikake</div><div style="display:flex;gap:10px"><span style="font-family:var(--mono);font-size:11px;color:var(--accent2)">70g C</span><span style="font-family:var(--mono);font-size:11px;color:var(--text2)">45g P</span><span style="font-family:var(--mono);font-size:11px;color:var(--text3)">22g F</span></div></div>
-        <div style="padding:10px 0"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px"><div style="font-size:13px;font-weight:600">Snacks</div><div style="font-family:var(--mono);font-size:11px;color:var(--text3)">~337 kcal</div></div><div style="font-size:13px;color:var(--text2);line-height:1.65;margin-bottom:5px">Chobani protein drink · Fage 0% Greek yogurt · gummi bears or Gatorade for the carb top-up</div><div style="display:flex;gap:10px"><span style="font-family:var(--mono);font-size:11px;color:var(--accent2)">30g C</span><span style="font-family:var(--mono);font-size:11px;color:var(--text2)">25g P</span><span style="font-family:var(--mono);font-size:11px;color:var(--text3)">13g F</span></div></div>
-      </div>
-    </div>
+  <!-- SUPPLEMENTS -->
+  <div class="cg-full">
     <div class="card">
       <div class="card-lbl" style="margin-bottom:14px">Supplement timing</div>
       <div style="display:flex;flex-direction:column;gap:0;margin-bottom:18px">
@@ -286,25 +266,6 @@ footer span{color:var(--text2)}
         <div style="padding:9px 0;display:flex;justify-content:space-between"><span style="font-size:13px;font-weight:600">Any time</span><span style="font-size:13px;color:var(--text2)">Slate milk (protein bridge)</span></div>
       </div>
 
-    </div>
-  </div>
-
-  <!-- KEY RULES -->
-  <div class="rules-grid">
-    <div class="card">
-      <div class="card-lbl" style="margin-bottom:12px">Key nutrition rules</div>
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div style="display:flex;gap:10px"><div style="width:22px;height:22px;background:rgba(200,240,102,.1);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:11px;font-weight:700;color:var(--accent);flex-shrink:0">1</div><div style="font-size:13px;color:var(--text2);line-height:1.65"><strong style="color:var(--text)">Pre-log dinner every morning.</strong> Anchor the day before it runs away. Caps the 3,000+ kcal blowouts.</div></div>
-        <div style="display:flex;gap:10px"><div style="width:22px;height:22px;background:rgba(200,240,102,.1);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:11px;font-weight:700;color:var(--accent);flex-shrink:0">2</div><div style="font-size:13px;color:var(--text2);line-height:1.65"><strong style="color:var(--text)">Use the current flat targets.</strong> 2,159 kcal / 225g C / 155g P / 71g F every day.</div></div>
-        <div style="display:flex;gap:10px"><div style="width:22px;height:22px;background:rgba(200,240,102,.1);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:11px;font-weight:700;color:var(--accent);flex-shrink:0">3</div><div style="font-size:13px;color:var(--text2);line-height:1.65"><strong style="color:var(--text)">200g cooked rice = ~45g carbs.</strong> Add one extra portion at lunch or dinner to close the carb gap.</div></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-lbl" style="margin-bottom:12px">Key nutrition rules (cont.)</div>
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div style="display:flex;gap:10px"><div style="width:22px;height:22px;background:rgba(200,240,102,.1);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:11px;font-weight:700;color:var(--accent);flex-shrink:0">4</div><div style="font-size:13px;color:var(--text2);line-height:1.65"><strong style="color:var(--text)">Keep most days between 2,050 and 2,250 kcal.</strong> Use the calorie bump for planned carbs, not an open-ended restaurant allowance.</div></div>
-        <div style="display:flex;gap:10px"><div style="width:22px;height:22px;background:rgba(200,240,102,.1);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:11px;font-weight:700;color:var(--accent);flex-shrink:0">5</div><div style="font-size:13px;color:var(--text2);line-height:1.65"><strong style="color:var(--text)">Creatine post-workout, every session.</strong> Already in your protocol. 5g monohydrate, don't skip it.</div></div>
-      </div>
     </div>
   </div>
 
