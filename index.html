@@ -102,6 +102,20 @@ footer span{color:var(--text2)}
 .scores-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .scores-grid .pl{width:94px}
 
+/* NUTRITION WATCHOUT */
+.macro-flag{display:grid;grid-template-columns:minmax(170px,.65fr) minmax(260px,1fr) minmax(300px,1.35fr);align-items:center;gap:22px;padding:18px 20px;margin-bottom:14px;background:rgba(240,184,102,.055);border:1px solid rgba(240,184,102,.32);border-left:3px solid var(--amber)}
+.macro-flag-head{display:flex;align-items:center;gap:10px;min-width:0}
+.macro-flag-icon{width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(240,184,102,.13);color:var(--amber);font-family:var(--mono);font-size:13px;font-weight:500}
+.macro-flag-kicker{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber)}
+.macro-flag-period{font-family:var(--mono);font-size:9px;color:var(--text3);margin-top:3px}
+.macro-flag-signals{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.macro-chip{font-family:var(--mono);font-size:10px;padding:5px 8px;border-radius:3px;white-space:nowrap}
+.macro-chip.high{color:var(--red);background:rgba(240,102,102,.1)}
+.macro-chip.low{color:var(--purple);background:rgba(160,102,240,.11)}
+.macro-chip.good{color:var(--accent2);background:rgba(102,240,200,.1)}
+.macro-flag-action{font-size:12px;color:var(--text2);line-height:1.6}
+.macro-flag-action strong{color:var(--text);font-weight:600}
+
 /* WEEKLY GOAL PULSE */
 .week-pulse{border:1px solid var(--border);background:var(--bg);margin-bottom:14px;overflow:hidden}
 .pulse-strip{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border)}
@@ -143,6 +157,7 @@ footer span{color:var(--text2)}
   .pulse-context,.pulse-action{grid-column:1/-1;font-size:9.5px;line-height:1.55}
   .pulse-action{text-align:left}
   .pulse-track{margin-top:1px}
+  .macro-flag{grid-template-columns:1fr;gap:13px;padding:16px 14px}
   footer{padding:16px 20px;flex-direction:column;gap:4px}
 }
 @media(max-width:480px){
@@ -367,6 +382,19 @@ footer span{color:var(--text2)}
 
 <!-- ── NUTRITION ──────────────────────────────────────────── -->
 <div id="nutrition" class="section">
+
+  <div class="macro-flag" role="note" aria-label="Macro watchout from the last seven logged days">
+    <div class="macro-flag-head">
+      <div class="macro-flag-icon">!</div>
+      <div><div class="macro-flag-kicker">Macro watchout</div><div class="macro-flag-period">Last 7 logged days · Oct 19-25</div></div>
+    </div>
+    <div class="macro-flag-signals">
+      <span class="macro-chip high">Fat +17.3g/day</span>
+      <span class="macro-chip low">Carbs -45.3g/day</span>
+      <span class="macro-chip good">Protein on track</span>
+    </div>
+    <div class="macro-flag-action"><strong>For the next 3 days:</strong> keep protein near 155g and calories near 2,159, while trading roughly 15-20g of fat for 40-45g of carbs each day.</div>
+  </div>
 
   <!-- LATEST GUIDANCE BANNER -->
   <div class="cg-full card" style="border:1px solid rgba(200,240,102,.2);background:rgba(200,240,102,.04)">
