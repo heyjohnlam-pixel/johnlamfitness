@@ -172,14 +172,15 @@ footer span{color:var(--text2)}
   <div>
     <h1>John Lam <span>Fitness Report</span></h1>
     <div class="header-meta">
-      <span id="snapshot-range">Oct 22 - Oct 28, 2026</span><span>·</span>
-      <span id="snapshot-source">Rolling pulse Oct 22-28 · Cronometer through Oct 28 (today unlogged) · Apple Health through Oct 27 · current coach targets through Oct 31 · activity check-ins through Oct 23 · trend tabs Oct 21-27 · DEXA x2</span>
+      <span id="snapshot-range">Oct 23 - Oct 29, 2026</span><span>·</span>
+      <span id="snapshot-source">Rolling pulse Oct 23-29 · Cronometer through Oct 29 (Oct 28-29 unlogged) · Apple Health through Oct 28 · current coach targets through Oct 31 · activity check-ins through Oct 23 · nutrition trend Oct 21-27 · training and recovery trends Oct 22-28 · DEXA x2</span>
     </div>
   </div>
   <div style="text-align:right">
     <label class="scan-badge snapshot-menu">
       <select class="snapshot-select" id="snapshot-select" onchange="setSnapshot(this.value)">
-        <option value="oct28" selected>Latest snapshot -- Oct 28, 2026</option>
+        <option value="oct29" selected>Latest snapshot -- Oct 29, 2026</option>
+        <option value="oct28">Oct 28 snapshot</option>
         <option value="oct27">Oct 27 snapshot</option>
         <option value="oct26">Oct 26 snapshot</option>
         <option value="oct25">Oct 25 snapshot</option>
@@ -215,39 +216,39 @@ footer span{color:var(--text2)}
     <div class="pulse-strip">
       <div class="pulse-intro">
         <div class="pulse-kicker">Rolling 7-day goal pulse</div>
-        <h2 class="pulse-title" id="pulse-title">Oct 22-28, 2026</h2>
-        <div class="pulse-window">Trailing 7 days · today pending</div>
+        <h2 class="pulse-title" id="pulse-title">Oct 23-29, 2026</h2>
+        <div class="pulse-window">Trailing 7 days · 2 nutrition days pending</div>
       </div>
 
       <article class="pulse-metric">
-        <div class="pulse-top"><div class="pulse-label">Nutrition + macros</div><span class="pulse-state sync">6 logged · 1 pending</span></div>
-        <div class="pulse-value">15,469 <small>/ 17,080 projected kcal</small></div>
-        <div class="pulse-context">13,259 logged · -1,611 projected · <span class="p">P 110%</span> · <span class="c">C 65%</span> · <span class="f">F 111%</span></div>
-        <div class="pulse-action"><strong>Remaining target math:</strong> 3,821 kcal · P 60g · C 858g · F 28g</div>
-        <div class="pulse-track" role="progressbar" aria-label="Rolling seven-day calories logged" aria-valuemin="0" aria-valuemax="100" aria-valuenow="78"><div class="pulse-fill" style="width:78%"></div></div>
+        <div class="pulse-top"><div class="pulse-label">Nutrition + macros</div><span class="pulse-state sync">5 logged · 2 pending</span></div>
+        <div class="pulse-value">15,023 <small>/ 17,080 projected kcal</small></div>
+        <div class="pulse-context">10,731 logged · -2,057 projected · <span class="p">P 110%</span> · <span class="c">C 59%</span> · <span class="f">F 111%</span></div>
+        <div class="pulse-action"><strong>Remaining target math:</strong> 6,349 kcal · P 235g · C 1,108g · F 114g</div>
+        <div class="pulse-track" role="progressbar" aria-label="Rolling seven-day calories logged" aria-valuemin="0" aria-valuemax="100" aria-valuenow="63"><div class="pulse-fill" style="width:63%"></div></div>
       </article>
 
       <article class="pulse-metric">
-        <div class="pulse-top"><div class="pulse-label">Strength</div><span class="pulse-state good">goal met</span></div>
-        <div class="pulse-value">3 <small>/ 3 sessions</small></div>
-        <div class="pulse-context">175 min · 3 sessions</div>
-        <div class="pulse-action"><strong>Rolling target:</strong> strength goal complete</div>
-        <div class="pulse-track" role="progressbar" aria-label="Rolling seven-day strength sessions" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><div class="pulse-fill strength" style="width:100%"></div></div>
+        <div class="pulse-top"><div class="pulse-label">Strength</div><span class="pulse-state focus">1 session left</span></div>
+        <div class="pulse-value">2 <small>/ 3 sessions</small></div>
+        <div class="pulse-context">117 min · 2 sessions</div>
+        <div class="pulse-action"><strong>Rolling target:</strong> 1 strength session needed</div>
+        <div class="pulse-track" role="progressbar" aria-label="Rolling seven-day strength sessions" aria-valuemin="0" aria-valuemax="100" aria-valuenow="67"><div class="pulse-fill strength" style="width:67%"></div></div>
       </article>
 
       <article class="pulse-metric">
-        <div class="pulse-top"><div class="pulse-label">Daily steps</div><span class="pulse-state sync">2 synced · 5 pending</span></div>
-        <div class="pulse-value">7,419 <small>avg / synced day</small></div>
-        <div class="pulse-context">14,838 known · 55,162 gap to 70k</div>
-        <div class="pulse-action"><strong>Rolling target:</strong> 11,032/day across 5 unsynced days</div>
-        <div class="pulse-track" role="progressbar" aria-label="Average synced steps toward ten thousand daily" aria-valuemin="0" aria-valuemax="100" aria-valuenow="74"><div class="pulse-fill steps" style="width:74%"></div></div>
+        <div class="pulse-top"><div class="pulse-label">Daily steps</div><span class="pulse-state sync">1 synced · 6 pending</span></div>
+        <div class="pulse-value">5,922 <small>avg / synced day</small></div>
+        <div class="pulse-context">5,922 known · 64,078 gap to 70k</div>
+        <div class="pulse-action"><strong>Rolling target:</strong> 10,680/day across 6 unsynced days</div>
+        <div class="pulse-track" role="progressbar" aria-label="Average synced steps toward ten thousand daily" aria-valuemin="0" aria-valuemax="100" aria-valuenow="59"><div class="pulse-fill steps" style="width:59%"></div></div>
       </article>
 
       <article class="pulse-metric">
         <div class="pulse-top"><div class="pulse-label">Cardio</div><span class="pulse-state focus">107 min left</span></div>
         <div class="pulse-value">13 <small>/ 120 min</small></div>
         <div class="pulse-context">13 dedicated min · walking excluded</div>
-        <div class="pulse-action"><strong>Rolling target:</strong> 107 dedicated min needed today</div>
+        <div class="pulse-action"><strong>Rolling target:</strong> 18 dedicated min per pending day across 6 days</div>
         <div class="pulse-track" role="progressbar" aria-label="Rolling seven-day dedicated cardio minutes" aria-valuemin="0" aria-valuemax="100" aria-valuenow="11"><div class="pulse-fill cardio" style="width:11%"></div></div>
       </article>
     </div>
@@ -255,8 +256,8 @@ footer span{color:var(--text2)}
 
   <!-- TODAY'S LOGGED INTAKE -->
   <div class="cg-full card" style="padding:26px 22px">
-    <div class="card-lbl" style="margin-bottom:4px">Today's logged intake -- Oct 28</div>
-    <div style="font-family:var(--sans);font-size:12px;color:var(--text3);margin-bottom:18px">Cronometer currently has no food entries for today. Active targets use the Oct 25-31 coach block: 2,440 kcal, 155g protein, 275g carbs, and 80g fat.</div>
+    <div class="card-lbl" style="margin-bottom:4px">Today's logged intake -- Oct 29</div>
+    <div style="font-family:var(--sans);font-size:12px;color:var(--text3);margin-bottom:18px">Cronometer currently has no food entries for today. Cronometer and the Oct 25-31 coach block now agree on 2,440 kcal, 155g protein, 275g carbs, and 80g fat.</div>
     <div class="today-grid">
       <div style="background:var(--bg2);padding:14px 12px;text-align:center"><div style="font-family:var(--mono);font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px">Calories</div><div style="font-size:1.25rem;font-weight:700;color:var(--accent)">Pending</div><div style="font-family:var(--mono);font-size:10px;color:var(--text3);margin-top:2px">target 2,440</div></div>
       <div style="background:var(--bg2);padding:14px 12px;text-align:center"><div style="font-family:var(--mono);font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px">Carbs</div><div style="font-size:1.25rem;font-weight:700;color:#a066f0">Pending</div><div style="font-family:var(--mono);font-size:10px;color:var(--text3);margin-top:2px">target 275g</div></div>
@@ -269,7 +270,7 @@ footer span{color:var(--text2)}
       <div><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-family:var(--sans);font-size:12px;color:var(--text2)">Protein</span><span style="font-family:var(--mono);font-size:11px;color:#66f0c8">pending</span></div><div style="height:5px;background:var(--border2)"></div></div>
       <div><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-family:var(--sans);font-size:12px;color:var(--text2)">Fat</span><span style="font-family:var(--mono);font-size:11px;color:#f0b866">pending</span></div><div style="height:5px;background:var(--border2)"></div></div>
     </div>
-    <div style="padding:12px 14px;background:var(--bg2);border-left:2px solid var(--amber);font-family:var(--sans);font-size:12px;color:var(--text2);line-height:1.6">No food is logged yet. This is pending, not zero. Rolling projections use the six completed logged days from Oct 22-27; do not force a one-day catch-up to the new weekly target.</div>
+    <div style="padding:12px 14px;background:var(--bg2);border-left:2px solid var(--amber);font-family:var(--sans);font-size:12px;color:var(--text2);line-height:1.6">No food is logged yet. This is pending, not zero. Rolling projections use the five completed logged days from Oct 23-27; Oct 28 and Oct 29 remain missing and are not counted as zero-intake days.</div>
   </div>
 
 </div>
@@ -280,7 +281,7 @@ footer span{color:var(--text2)}
   <div class="ins-list">
     <div class="ins"><div class="ins-ic ic">+</div><div><h4>Body recomposition confirmed -- -3.8 lb fat, +3.5 lb lean between DEXA scans</h4><p>Lost 3.8 lb of fat while gaining 3.5 lb of lean mass (Jan 7 to Jun 6). This is genuine recomposition in a deficit -- the ideal outcome of consistent heavy strength training.</p></div></div>
     <div class="ins"><div class="ins-ic ig">P</div><div><h4>Protein stayed decisively ahead of target</h4><p>Protein averaged 171.3g, or 111% of the unchanged 155g target. All seven logged days reached goal, giving the completed week strong support for lean-mass retention.</p></div></div>
-    <div class="ins"><div class="ins-ic ic">T</div><div><h4>The strength goal was met</h4><p>Three strength sessions and two runs totaled 211 minutes across four workout days. Strength volume reached 175 minutes, with walking excluded from cardio.</p></div></div>
+    <div class="ins"><div class="ins-ic ic">T</div><div><h4>The strength goal was met</h4><p>Three strength sessions and one run totaled 188 minutes across three workout days from Oct 22-28. Strength volume reached 175 minutes, with walking excluded from cardio.</p></div></div>
     <div class="ins"><div class="ins-ic ic">V</div><div><h4>VO2 max reached a new weekly high</h4><p>VO2 max rose from 50.71 on Oct 21 to 51.65 on Oct 27, a net gain of 0.94 across the completed week's readings.</p></div></div>
   </div>
 
@@ -290,37 +291,37 @@ footer span{color:var(--text2)}
     <div class="ins"><div class="ins-ic ir">F</div><div><h4>Fat is still running high against the updated plan</h4><p>Fat averaged 88.6g against the new 80g target, reaching 111% of plan. Keep fat near 80g while directing the added calorie room toward carbohydrates.</p></div></div>
     <div class="ins"><div class="ins-ic ia">C</div><div><h4>Carbs are the largest gap to the new plan</h4><p>Carbs averaged 176.6g, or 64% of the new 275g target. The new growth-phase plan adds 50g of carbs per day, but recent intake has not moved up yet.</p></div></div>
     <div class="ins"><div class="ins-ic ir">V</div><div><h4>VAT increased 81% between DEXA scans -- most important watchout</h4><p>Visceral fat rose from 1.28 to 2.32 lb while all other fat metrics improved. The dashboard cannot identify the cause from these two scans alone. Use the next DEXA scan to confirm the direction and discuss the result with your clinician if it remains elevated.</p></div></div>
-    <div class="ins"><div class="ins-ic ia">R</div><div><h4>Recorded sleep is high, but unusually variable</h4><p>Seven recorded nights averaged 9h14, lifted by 13h04 on Oct 26 and 12h45 on Oct 27. HRV averaged 42.1ms and ranged from 27.3 to 58.9ms, so day-to-day recovery variability remains meaningful.</p></div></div>
-    <div class="ins"><div class="ins-ic ia">D</div><div><h4>Daily movement is still below the 10k pace</h4><p>Steps averaged 8,590 across the three synced days through Oct 23. One of three cleared 10,000, with the most recent synced day at 5,922.</p></div></div>
+    <div class="ins"><div class="ins-ic ia">R</div><div><h4>Recorded sleep is high, but unusually variable</h4><p>Seven recorded nights averaged 10h05, lifted by three consecutive 12-plus-hour entries from Oct 26-28. HRV averaged 39.1ms and ranged from 27.3 to 58.9ms; Oct 28 was 31.1ms with a 52 bpm resting heart rate.</p></div></div>
+    <div class="ins"><div class="ins-ic ia">D</div><div><h4>Daily movement is still below the 10k pace</h4><p>Steps averaged 7,419 across the two synced days from Oct 22-23. Neither day cleared 10,000, and Oct 24-28 remain pending.</p></div></div>
   </div>
 
   <div class="st">Top 3 actions this week</div>
   <div class="ins-list">
     <div class="ins"><div class="ins-ic ic">1</div><div><h4>Use the calorie increase for carbohydrates</h4><p>Move toward 275g of carbs while keeping fat near 80g and protein near 155g. A practical first step is 60-80g more carbs and roughly 9g less fat than the recent daily average.</p></div></div>
-    <div class="ins"><div class="ins-ic ic">2</div><div><h4>Schedule three strength sessions and 120 dedicated cardio minutes</h4><p>The strength goal was met, but dedicated cardio reached only 35 of the new 120-minute target. Runs, treadmill work, cycling, rowing, and similar sessions count; walking does not.</p></div></div>
-    <div class="ins"><div class="ins-ic ic">3</div><div><h4>Restore the 10k step average and make sleep steadier</h4><p>Steps averaged 8,590 through Oct 23. Recorded sleep averaged 9h14, but two 12-plus-hour nights drove much of that increase; aim for a steadier seven-plus hours.</p></div></div>
+    <div class="ins"><div class="ins-ic ic">2</div><div><h4>Schedule three strength sessions and 120 dedicated cardio minutes</h4><p>The strength goal was met in the Oct 22-28 training window, but dedicated cardio reached only 13 of 120 minutes. Runs, treadmill work, cycling, rowing, and similar sessions count; walking does not.</p></div></div>
+    <div class="ins"><div class="ins-ic ic">3</div><div><h4>Restore the 10k step average and make sleep steadier</h4><p>Steps averaged 7,419 through Oct 23. Recorded sleep averaged 10h05 from Oct 22-28, but three 12-plus-hour entries drove much of that increase; aim for a steadier seven-plus hours.</p></div></div>
   </div>
 </div>
 
 <!-- ── TRAINING ──────────────────────────────────────────── -->
 <div id="training" class="section">
   <div class="sg">
-    <div class="sc"><div class="lbl">Dedicated workouts</div><div class="val">5</div><div class="sub">Oct 21-27 · 4 workout days</div></div>
+    <div class="sc"><div class="lbl">Dedicated workouts</div><div class="val">4</div><div class="sub">Oct 22-28 · 3 workout days</div></div>
     <div class="sc"><div class="lbl">Strength sessions</div><div class="val">3</div><div class="sub">175.2 total minutes <span class="tg">goal met</span></div></div>
-    <div class="sc"><div class="lbl">Running sessions</div><div class="val">2</div><div class="sub">35.3 of 120 cardio minutes</div></div>
-    <div class="sc"><div class="lbl">Workout volume</div><div class="val">211<sup>min</sup></div><div class="sub">Strength + running only</div></div>
-    <div class="sc"><div class="lbl">Active energy avg</div><div class="val">448<sup>kcal</sup></div><div class="sub">Daily average · Oct 21-27</div></div>
+    <div class="sc"><div class="lbl">Running sessions</div><div class="val">1</div><div class="sub">12.6 of 120 cardio minutes</div></div>
+    <div class="sc"><div class="lbl">Workout volume</div><div class="val">188<sup>min</sup></div><div class="sub">Strength + running only</div></div>
+    <div class="sc"><div class="lbl">Cardio target</div><div class="val">120<sup>min</sup></div><div class="sub">13 min logged · walking excluded</div></div>
     <div class="sc"><div class="lbl">Longest session</div><div class="val">69<sup>min</sup></div><div class="sub">Strength · Oct 27</div></div>
   </div>
 
   <div class="cg2">
     <div class="card">
-      <div class="card-lbl">Training volume -- Oct 21-27</div>
+      <div class="card-lbl">Training volume -- Oct 22-28</div>
       <div class="legend">
         <div class="li"><div class="ld" style="background:#a066f0"></div>Strength</div>
         <div class="li"><div class="ld" style="background:#66f0c8"></div>Running</div>
       </div>
-      <div style="position:relative;height:220px"><canvas id="trainChart" role="img" aria-label="Dedicated training volume by type for October 21 to 27"></canvas></div>
+      <div style="position:relative;height:220px"><canvas id="trainChart" role="img" aria-label="Dedicated training volume by type for October 22 to 28"></canvas></div>
       <div style="font-size:12px;color:var(--text3);line-height:1.55;margin-top:12px">Walking is excluded from cardio and workout totals. The current coach target is 120 dedicated cardio minutes.</div>
     </div>
     <div class="card">
@@ -330,7 +331,6 @@ footer span{color:var(--text2)}
         <div style="padding:9px 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:13px;font-weight:600">Run · Oct 27</div><div style="font-size:12px;color:var(--text3);margin-top:1px">12.6 min · Apple Health</div></div><div style="font-family:var(--mono);font-size:12px;color:var(--accent2)">84 active kcal</div></div>
         <div style="padding:9px 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:13px;font-weight:600">Strength · Oct 24</div><div style="font-size:12px;color:var(--text3);margin-top:1px">48.0 min · Apple Health</div></div><div style="font-family:var(--mono);font-size:12px;color:var(--accent2)">177 active kcal</div></div>
         <div style="padding:9px 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:13px;font-weight:600">Strength · Oct 22</div><div style="font-size:12px;color:var(--text3);margin-top:1px">58.7 min · Apple Health</div></div><div style="font-family:var(--mono);font-size:12px;color:var(--accent2)">214 active kcal</div></div>
-        <div style="padding:9px 0;display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:13px;font-weight:600">Run · Oct 21</div><div style="font-size:12px;color:var(--text3);margin-top:1px">22.7 min · Apple Health</div></div><div style="font-family:var(--mono);font-size:12px;color:var(--accent2)">171 active kcal</div></div>
       </div>
     </div>
   </div>
@@ -402,7 +402,7 @@ footer span{color:var(--text2)}
   <div class="cg-full card" style="border:1px solid rgba(200,240,102,.2);background:rgba(200,240,102,.04)">
     <div style="font-family:var(--sans);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px">Oct 21-27 -- nutrition insights</div>
     <div style="display:flex;flex-direction:column;gap:14px">
-      <div style="display:flex;gap:13px;align-items:flex-start"><div style="width:26px;height:26px;background:rgba(200,240,102,.12);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:12px;font-weight:700;color:#c8f066;flex-shrink:0">1</div><div><div style="font-size:13px;font-weight:600;margin-bottom:3px">The coach raised the active nutrition targets</div><div style="font-size:13px;color:var(--text2);line-height:1.65">Calories increased from 2,159 to 2,440, carbs from 225g to 275g, and fat from 71g to 80g. Protein remains 155g. The coach sheet is the source of truth; Cronometer still displayed the previous defaults when checked today.</div></div></div>
+      <div style="display:flex;gap:13px;align-items:flex-start"><div style="width:26px;height:26px;background:rgba(200,240,102,.12);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:12px;font-weight:700;color:#c8f066;flex-shrink:0">1</div><div><div style="font-size:13px;font-weight:600;margin-bottom:3px">Cronometer and the coach plan now match</div><div style="font-size:13px;color:var(--text2);line-height:1.65">Both sources now show 2,440 kcal, 155g protein, 275g carbs, and 80g fat. These targets are unchanged from the Oct 25-31 coach block and drive every dashboard calculation.</div></div></div>
       <div style="display:flex;gap:13px;align-items:flex-start"><div style="width:26px;height:26px;background:rgba(240,184,102,.12);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:12px;font-weight:700;color:#f0b866;flex-shrink:0">2</div><div><div style="font-size:13px;font-weight:600;margin-bottom:3px">Recent intake averaged 2,203 kcal</div><div style="font-size:13px;color:var(--text2);line-height:1.65">That is 237 kcal below the new 2,440 target, or 90% of plan. The seven-day total was 15,421 kcal, 1,659 kcal below the new weekly target; this window straddles the target change.</div></div></div>
       <div style="display:flex;gap:13px;align-items:flex-start"><div style="width:26px;height:26px;background:rgba(160,102,240,.12);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:12px;font-weight:700;color:#a066f0;flex-shrink:0">3</div><div><div style="font-size:13px;font-weight:600;margin-bottom:3px">Carbs are the main forward-looking gap</div><div style="font-size:13px;color:var(--text2);line-height:1.65">Carbs averaged 176.6g, or 64% of the new target. Protein averaged 171.3g and fat 88.6g, both 111% of their current targets, so the added calorie room should primarily come from carbs.</div></div></div>
     </div>
@@ -448,26 +448,26 @@ footer span{color:var(--text2)}
 <!-- ── RECOVERY ──────────────────────────────────────────── -->
 <div id="recovery" class="section">
   <div class="sg">
-    <div class="sc"><div class="lbl">HRV average</div><div class="val">42.1<sup>ms</sup></div><div class="sub">Range 27.3-58.9 · Oct 21-27</div></div>
-    <div class="sc"><div class="lbl">RHR average</div><div class="val">55.7<sup>bpm</sup></div><div class="sub">Range 52-58 · Oct 21-27</div></div>
-    <div class="sc"><div class="lbl">VO2 max</div><div class="val">51.65</div><div class="sub">Oct 27 reading · 50.71 on Oct 21</div></div>
-    <div class="sc"><div class="lbl">Sleep average</div><div class="val">9.2<sup>h</sup></div><div class="sub">9h14 · 7 nights Oct 21-27</div></div>
+    <div class="sc"><div class="lbl">HRV average</div><div class="val">39.1<sup>ms</sup></div><div class="sub">Range 27.3-58.9 · Oct 22-28</div></div>
+    <div class="sc"><div class="lbl">RHR average</div><div class="val">55.1<sup>bpm</sup></div><div class="sub">Range 52-58 · Oct 22-28</div></div>
+    <div class="sc"><div class="lbl">VO2 max</div><div class="val">51.65</div><div class="sub">Latest reading Oct 27 · 50.52 on Oct 22</div></div>
+    <div class="sc"><div class="lbl">Sleep average</div><div class="val">10.1<sup>h</sup></div><div class="sub">10h05 · 7 nights Oct 22-28</div></div>
     <div class="sc"><div class="lbl">Weight average</div><div class="val">136.0<sup>lb</sup></div><div class="sub">3 check-ins · Oct 22-24</div></div>
-    <div class="sc"><div class="lbl">Steps average</div><div class="val">8,590</div><div class="sub">1 of 3 days at 10k+ · Oct 21-23</div></div>
+    <div class="sc"><div class="lbl">Steps average</div><div class="val">7,419</div><div class="sub">0 of 2 days at 10k+ · Oct 22-23</div></div>
   </div>
 
   <div class="cg-eq">
     <div class="card">
-      <div class="card-lbl">HRV -- Oct 21-27</div>
-      <div class="legend"><div class="li"><div class="ld" style="background:#a066f0"></div>HRV (ms)</div><div class="li"><div class="ld" style="background:#3a3a5a;height:2px;border-radius:0;width:14px"></div>Recorded average (42.1ms)</div></div>
-      <div style="position:relative;height:200px"><canvas id="hrvChart" role="img" aria-label="HRV trend October 21 to 27"></canvas></div>
+      <div class="card-lbl">HRV -- Oct 22-28</div>
+      <div class="legend"><div class="li"><div class="ld" style="background:#a066f0"></div>HRV (ms)</div><div class="li"><div class="ld" style="background:#3a3a5a;height:2px;border-radius:0;width:14px"></div>Recorded average (39.1ms)</div></div>
+      <div style="position:relative;height:200px"><canvas id="hrvChart" role="img" aria-label="HRV trend October 22 to 28"></canvas></div>
     </div>
     <div class="card">
-      <div class="card-lbl">Sleep -- Oct 21-27</div>
-      <div style="position:relative;height:180px;margin-bottom:16px"><canvas id="sleepChart" role="img" aria-label="Sleep duration October 21 to 27"></canvas></div>
+      <div class="card-lbl">Sleep -- Oct 22-28</div>
+      <div style="position:relative;height:180px;margin-bottom:16px"><canvas id="sleepChart" role="img" aria-label="Sleep duration October 22 to 28"></canvas></div>
       <div style="padding:10px 0;border-top:1px solid var(--border)">
         <div style="font-size:13px;font-weight:600;margin-bottom:4px">7 of 7 nights recorded</div>
-        <div style="font-size:13px;color:var(--text2);line-height:1.6">Recorded sleep averaged 9h14, with five of seven nights at seven hours or more. The 13h04 and 12h45 final nights lifted the average; sleep stages and a device sleep score are not available.</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.6">Recorded sleep averaged 10h05, with six of seven nights at seven hours or more. Three consecutive 12-plus-hour entries from Oct 26-28 lifted the average; sleep stages and a device sleep score are not available.</div>
       </div>
     </div>
   </div>
@@ -475,15 +475,15 @@ footer span{color:var(--text2)}
   <div class="cg-eq">
     <div class="card">
       <div class="card-lbl">VO2 max -- recent readings</div>
-      <div style="position:relative;height:160px"><canvas id="vo2Chart" role="img" aria-label="VO2 max readings October 21 to 27"></canvas></div>
+      <div style="position:relative;height:160px"><canvas id="vo2Chart" role="img" aria-label="VO2 max readings October 22 to 27"></canvas></div>
     </div>
     <div class="card">
-      <div class="card-lbl">Daily steps -- Oct 21-27</div>
+      <div class="card-lbl">Daily steps -- Oct 22-28</div>
       <div class="legend"><div class="li"><div class="ld" style="background:#66f0c8"></div>10k+</div><div class="li"><div class="ld" style="background:#f06666"></div>Below 10k</div><div class="li"><div class="ld" style="background:#f0b866;height:2px;border-radius:0;width:14px"></div>10k target</div></div>
-      <div style="position:relative;height:180px;margin-bottom:16px"><canvas id="stepsChart" role="img" aria-label="Daily steps October 21 to 27"></canvas></div>
+      <div style="position:relative;height:180px;margin-bottom:16px"><canvas id="stepsChart" role="img" aria-label="Daily steps October 22 to 28"></canvas></div>
       <div style="padding:10px 0;border-top:1px solid var(--border)">
-        <div style="font-size:13px;font-weight:600;margin-bottom:4px">25,769 total steps through Oct 23</div>
-        <div style="font-size:13px;color:var(--text2);line-height:1.6">One day cleared 10,000. The high was 10,931 on Oct 21 and the low was 5,922 on Oct 23. Oct 24-27 are pending.</div>
+        <div style="font-size:13px;font-weight:600;margin-bottom:4px">14,838 total steps through Oct 23</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.6">Neither synced day cleared 10,000. The high was 8,916 on Oct 22 and the low was 5,922 on Oct 23. Oct 24-28 are pending.</div>
       </div>
     </div>
   </div>
@@ -492,8 +492,8 @@ footer span{color:var(--text2)}
 </main>
 
 <footer>
-  <p>John Lam -- Fitness Dashboard -- <span id="footer-range">Oct 22-28, 2026 rolling 7-day pulse</span></p>
-  <p>Nutrition: <span id="footer-nutrition">Oct 22-27 logged; Oct 28 currently unlogged</span> -- <span id="footer-updated">Updated Oct 28, 2026</span></p>
+  <p>John Lam -- Fitness Dashboard -- <span id="footer-range">Oct 23-29, 2026 rolling 7-day pulse</span></p>
+  <p>Nutrition: <span id="footer-nutrition">Oct 23-27 logged; Oct 28-29 unlogged</span> -- <span id="footer-updated">Updated Oct 29, 2026</span></p>
 </footer>
 
 <script>
@@ -505,13 +505,13 @@ function showTab(id,el){
 }
 
 const snapshots={
-  oct28:{
-    range:'Oct 22 - Oct 28, 2026',
-    source:'Rolling pulse Oct 22-28 - Cronometer through Oct 28 (today unlogged) - Apple Health through Oct 27 - current coach targets through Oct 31 - activity check-ins through Oct 23 - trend tabs Oct 21-27 - DEXA x2',
-    badge:'Latest snapshot -- Oct 28, 2026',
-    footerRange:'Oct 22-28, 2026 rolling 7-day pulse',
-    footerNutrition:'Oct 22-27 logged; Oct 28 currently unlogged',
-    updated:'Updated Oct 28, 2026'
+  oct29:{
+    range:'Oct 23 - Oct 29, 2026',
+    source:'Rolling pulse Oct 23-29 - Cronometer through Oct 29 (Oct 28-29 unlogged) - Apple Health through Oct 28 - current coach targets through Oct 31 - activity check-ins through Oct 23 - nutrition trend Oct 21-27 - training and recovery trends Oct 22-28 - DEXA x2',
+    badge:'Latest snapshot -- Oct 29, 2026',
+    footerRange:'Oct 23-29, 2026 rolling 7-day pulse',
+    footerNutrition:'Oct 23-27 logged; Oct 28-29 unlogged',
+    updated:'Updated Oct 29, 2026'
   },
   aug8:{
     range:'Aug 1 - Aug 7, 2026',
@@ -539,6 +539,7 @@ const snapshots={
   }
 };
 const snapshotPages={
+  oct28:'snapshots/oct-28-2026.html',
   oct27:'snapshots/oct-27-2026.html',
   oct26:'snapshots/oct-26-2026.html',
   oct25:'snapshots/oct-25-2026.html',
@@ -552,7 +553,7 @@ const snapshotPages={
   jun:'snapshots/jun-14-2026.html'
 };
 function setSnapshot(id){
-  if(id!=='oct28'){
+  if(id!=='oct29'){
     window.location.href=snapshotPages[id];
     return;
   }
@@ -564,7 +565,7 @@ function setSnapshot(id){
   document.getElementById('footer-updated').textContent=s.updated;
   document.getElementById('snapshot-select').value=id;
 }
-setSnapshot('oct28');
+setSnapshot('oct29');
 
 // -- CHARTS --
 const gc='rgba(255,255,255,0.05)',tc='#7a7672';
@@ -573,10 +574,10 @@ const base=(extra={})=>({responsive:true,maintainAspectRatio:false,plugins:{lege
 
 // Training chart
 new Chart(document.getElementById('trainChart'),{type:'bar',data:{
-  labels:['Oct 21','Oct 22','Oct 23','Oct 24','Oct 25','Oct 26','Oct 27'],
+  labels:['Oct 22','Oct 23','Oct 24','Oct 25','Oct 26','Oct 27','Oct 28'],
   datasets:[
-    {label:'Strength',data:[0,58.68,0,47.97,0,0,68.59],backgroundColor:'#a066f0'},
-    {label:'Running',data:[22.65,0,0,0,0,0,12.64],backgroundColor:'#66f0c8'}
+    {label:'Strength',data:[58.68,0,47.97,0,0,68.59,0],backgroundColor:'#a066f0'},
+    {label:'Running',data:[0,0,0,0,0,12.64,0],backgroundColor:'#66f0c8'}
   ]},options:base()});
 
 // DEXA chart
@@ -603,15 +604,15 @@ new Chart(document.getElementById('carbW2'),{type:'bar',data:{labels:w2days,data
   {label:'Target',data:Array(w2days.length).fill(275),type:'line',borderColor:'rgba(160,102,240,0.3)',pointRadius:0,borderWidth:1,borderDash:[4,3],backgroundColor:'transparent'}
   ]},options:{...base(),scales:{y:{min:0,max:300,grid:{color:gc},ticks:{color:tc,font:{family:'IBM Plex Mono, monospace',size:10},callback:v=>v+'g'}},x:{grid:{color:gc},ticks:{color:tc,font:{family:'IBM Plex Mono, monospace',size:10}}}}}});
 
-// Oct 21-27 HRV from Apple Health.
-const hrvDates=['Oct 21','Oct 22','Oct 23','Oct 24','Oct 25','Oct 26','Oct 27'];
-const hrvVals=[51.89,43.63,58.91,31.52,27.26,33.63,47.8];
+// Oct 22-28 HRV from Apple Health.
+const hrvDates=['Oct 22','Oct 23','Oct 24','Oct 25','Oct 26','Oct 27','Oct 28'];
+const hrvVals=[43.63,58.91,31.52,27.26,33.63,47.8,31.07];
 new Chart(document.getElementById('hrvChart'),{type:'line',data:{labels:hrvDates,datasets:[
   {label:'HRV',data:hrvVals,borderColor:'#a066f0',backgroundColor:'rgba(160,102,240,0.06)',fill:true,pointRadius:2,pointBackgroundColor:'#a066f0',borderWidth:1.5,tension:0.3},
-  {label:'Avg',data:Array(hrvDates.length).fill(42.1),borderColor:'#3a3a5a',backgroundColor:'transparent',pointRadius:0,borderWidth:1,borderDash:[6,4]}
+  {label:'Avg',data:Array(hrvDates.length).fill(39.1),borderColor:'#3a3a5a',backgroundColor:'transparent',pointRadius:0,borderWidth:1,borderDash:[6,4]}
   ]},options:{...base(),scales:{y:{min:0,max:70,grid:{color:gc},ticks:{color:tc,font:{family:'IBM Plex Mono, monospace',size:10},callback:v=>v+'ms'}},x:{grid:{color:gc},ticks:{color:tc,font:{family:'IBM Plex Mono, monospace',size:9},maxRotation:45,autoSkip:true,maxTicksLimit:10}}}}});
 
-const sleepDates=['Oct 21','Oct 22','Oct 23','Oct 24','Oct 25','Oct 26','Oct 27'];
+const sleepDates=['Oct 22','Oct 23','Oct 24','Oct 25','Oct 26','Oct 27','Oct 28'];
 const toHours=value=>{
   if(value===null)return null;
   const parts=value.split(':').map(Number);
@@ -621,18 +622,18 @@ const formatHours=value=>{
   const totalMinutes=Math.round(value*60);
   return Math.floor(totalMinutes/60)+'h '+String(totalMinutes%60).padStart(2,'0')+'m';
 };
-const sleepText=['6:49','6:28','7:14','7:49','10:28','13:04','12:45'];
+const sleepText=['6:28','7:14','7:49','10:28','13:04','12:45','12:45'];
 const sleepVals=sleepText.map(toHours);
 new Chart(document.getElementById('sleepChart'),{type:'bar',data:{labels:sleepDates,datasets:[
   {label:'Sleep',data:sleepVals,backgroundColor:sleepVals.map(v=>v===null?'transparent':v>=7?'#a066f0':v>=6?'#a066f088':'#f06666')}
   ]},options:{...base(),plugins:{legend:{display:false},tooltip:{...tt,callbacks:{label:context=>'Sleep: '+formatHours(context.parsed.y)}}},scales:{y:{min:4,max:14,grid:{color:gc},ticks:{color:tc,font:{family:'IBM Plex Mono, monospace',size:10},callback:v=>v+'h'}},x:{grid:{color:gc},ticks:{color:tc,font:{family:'IBM Plex Mono, monospace',size:9},maxRotation:45,autoSkip:true,maxTicksLimit:10}}}}});
 
-new Chart(document.getElementById('vo2Chart'),{type:'line',data:{labels:['Oct 21','Oct 22','Oct 25','Oct 27'],datasets:[
-  {label:'VO2 max',data:[50.71,50.52,51.1,51.65],borderColor:'#c8f066',backgroundColor:'rgba(200,240,102,0.06)',fill:true,pointRadius:3,pointBackgroundColor:'#c8f066',borderWidth:2,tension:0.3}
+new Chart(document.getElementById('vo2Chart'),{type:'line',data:{labels:['Oct 22','Oct 25','Oct 27'],datasets:[
+  {label:'VO2 max',data:[50.52,51.1,51.65],borderColor:'#c8f066',backgroundColor:'rgba(200,240,102,0.06)',fill:true,pointRadius:3,pointBackgroundColor:'#c8f066',borderWidth:2,tension:0.3}
   ]},options:{...base(),scales:{y:{min:49,max:52,grid:{color:gc},ticks:{color:tc,font:{family:'IBM Plex Mono, monospace',size:10}}},x:{grid:{color:gc},ticks:{color:tc,font:{family:'IBM Plex Mono, monospace',size:9},maxRotation:45}}}}});
 
-const stepDates=['Oct 21','Oct 22','Oct 23','Oct 24','Oct 25','Oct 26','Oct 27'];
-const stepVals=[10931,8916,5922,null,null,null,null];
+const stepDates=['Oct 22','Oct 23','Oct 24','Oct 25','Oct 26','Oct 27','Oct 28'];
+const stepVals=[8916,5922,null,null,null,null,null];
 new Chart(document.getElementById('stepsChart'),{type:'bar',data:{labels:stepDates,datasets:[
   {label:'Steps',data:stepVals,backgroundColor:stepVals.map(v=>v===null?'transparent':v>=10000?'#66f0c8':'#f06666')},
   {label:'Target',data:Array(stepDates.length).fill(10000),type:'line',borderColor:'rgba(240,184,102,0.45)',pointRadius:0,borderWidth:1,borderDash:[4,3],backgroundColor:'transparent'}
